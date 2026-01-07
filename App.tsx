@@ -58,6 +58,11 @@ const App: React.FC = () => {
         />
       </div>
 
+      <footer className="app-footer">
+        <div className="footer-line"></div>
+        <p className="footer-brand">방구석 음악만들기</p>
+      </footer>
+
       <div 
         className={`toast ${toastVisible ? 'visible' : 'hidden'}`}
       >

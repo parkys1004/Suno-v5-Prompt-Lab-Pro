@@ -31,6 +31,9 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -82,6 +85,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  flex: 1;
 }
 
 @media (min-width: 1024px) {
@@ -100,7 +104,7 @@ body {
 @media (min-width: 1024px) {
   .sidebar-column {
     grid-column: span 4;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 280px);
   }
 }
 
@@ -259,7 +263,6 @@ body {
   border-radius: 1rem;
   padding: 1rem;
   border: 1px solid #f3f4f6;
-  /* 차트 렌더링 오류 방지를 위해 명시적 최소 높이 설정 */
   min-height: 350px;
 }
 
@@ -418,6 +421,27 @@ body {
 
 .prompt-card:hover .prompt-desc-box {
   background: rgba(255,255,255,0.8);
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.footer-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #d1d5db;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 /* Toast */

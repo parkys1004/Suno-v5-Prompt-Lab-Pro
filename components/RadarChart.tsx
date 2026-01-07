@@ -18,7 +18,7 @@ export const RadarChartComponent: React.FC<RadarChartProps> = ({ data, category 
   const fillColor = category === 'K-POP' ? 'rgba(219, 39, 119, 0.15)' : 'rgba(59, 130, 246, 0.15)';
 
   return (
-    <div className="w-full h-[320px]">
+    <div className="chart-container-inner">
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
           <PolarGrid />

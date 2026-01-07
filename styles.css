@@ -259,6 +259,8 @@ body {
   border-radius: 1rem;
   padding: 1rem;
   border: 1px solid #f3f4f6;
+  /* 차트 렌더링 오류 방지를 위해 명시적 최소 높이 설정 */
+  min-height: 350px;
 }
 
 @media (min-width: 768px) {

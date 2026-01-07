@@ -18,10 +18,10 @@ export const RadarChartComponent: React.FC<RadarChartProps> = ({ data, category 
   const fillColor = category === 'K-POP' ? 'rgba(219, 39, 119, 0.15)' : 'rgba(59, 130, 246, 0.15)';
 
   return (
-    <div className="chart-container-inner">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="chart-container-inner" style={{ minHeight: '320px' }}>
+      <ResponsiveContainer width="100%" height={320}>
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
-          <PolarGrid />
+          <PolarGrid stroke="#e5e7eb" />
           <PolarAngleAxis 
             dataKey="subject" 
             tick={{ fill: '#4b5563', fontSize: 12, fontWeight: 700 }} 
@@ -33,7 +33,7 @@ export const RadarChartComponent: React.FC<RadarChartProps> = ({ data, category 
             stroke={color}
             strokeWidth={3}
             fill={fillColor}
-            fillOpacity={1}
+            fillOpacity={0.6}
           />
         </RadarChart>
       </ResponsiveContainer>
